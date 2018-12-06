@@ -94,12 +94,11 @@ function errorHandler(err) {
             db.collection("location-notification").where("timeInMS", ">", timeCheck).orderBy("timeInMS").limit(1).get().then(function(querySnapshot) {
               querySnapshot.forEach(function(doc) {
                   // doc.data() is never undefined for query doc snapshots
-              cordova.plugins.notification.local.schedule({
-                 title:"ALERT",
-                 text:myname+'Need help! near '+address,
-                 foreground:true
-               });
-                  console.log(text);
+                  cordova.plugins.notification.local.schedule({
+                     title:"ALERT",
+                     text:myname+'Need help! near '+Address,
+                     foreground:true
+                   });
                   console.log(doc.id, " => ", doc.data());
               });
             }).catch(function(error) {

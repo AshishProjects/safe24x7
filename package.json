@@ -27,7 +27,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "https://github.com/"
+      "url": "https://github.com/projectWork1/safe24x7.git"
     },
     "cordova": {
         "plugins": {
