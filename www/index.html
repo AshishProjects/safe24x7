@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-messaging.js"></script> -->
+        <script src="https://maps.googleapis.com/maps/api/js?Key=AIzaSyCj9CHnVckMuQfkX9UXQ8c5hHHxkoMhHrY&signed_in=true"></script>
+
+
+  </head>
+  <body>
+<header>
+<div class="menu"><img src="image/sos-logo-final.png" alt="logo"><h1>Safe24x7</h1></div>
+</header>
+<main>
+
+  <div class="main">
+    <h1>Login</h1>
+    <form name="loginForm" method="post" id="loginForm">
+     <label for="user" class="hidden">Username</label>
+      <input type="email" placeholder="Email/Username" name="emailname" id="email">
+
+      <label for="pass" class="hidden">Password</label>
+      <input type="password" placeholder="Password" name="pass" id="pass">
+
+    <label for="data" class="hidden">Click to submit your data</label>
+    <input type="submit" value="Login" onclick="loginId(event)" name="submit" id="data">
+ </form>
+ <div id="on-no-response">
+
+ </div>
+    <p><a href="resetpassword.html">Forget Password?</a></p>
+    <p>New User?  <a href="signup.html">Sign up </a></p>
+</div>
+</main>
+
+<footer>
+<div class="footer">
+  <h2>Safe24x7</h2>
+<hr>
+<ul>
+    <li>Prevention</li>
+    <li>Protection</li>
+    <li>Safety</li>
+</div>
+ </footer>
+
+ <script>
+   // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyBlQZeSUe-aRZbUvY1gF9G6t2rhMW9BSzY",
+     authDomain: "safeapp-6cda0.firebaseapp.com",
+     databaseURL: "https://safeapp-6cda0.firebaseio.com",
+     projectId: "safeapp-6cda0",
+     storageBucket: "safeapp-6cda0.appspot.com",
+     messagingSenderId: "621321399323"
+   };
+   firebase.initializeApp(config);
+   const db= firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+ </script>
+ <!-- <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDVDOv3bfmDax6pPnME4cF1-yjkBBcg5n0",
+    authDomain: "test1-c1a3f.firebaseapp.com",
+    databaseURL: "https://test1-c1a3f.firebaseio.com",
+    projectId: "test1-c1a3f",
+    storageBucket: "test1-c1a3f.appspot.com",
+    messagingSenderId: "734281412457"
+  };
+  firebase.initializeApp(config);
+  const db= firebase.firestore();
+ db.settings({timestampsInSnapshots: true});
+
+ // const message = firebase.messaging();
+  // Add the public key generated from the console here.
+ // message.usePublicVapidKey("BKxt-ghYxSv0ZfoaYA-3J9wFc9dLb-b29bPyE0N5bGVMjod8orLGeA3OtNahZVigqTOMY-dslgijT-8XIv-kpLQ");
+
+</script> -->
+<script src="js/login.js"></script>
+ </body>
+</html>

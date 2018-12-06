@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts</title>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <link rel="stylesheet" href="css/style2.css">
+       <link rel="stylesheet" href="icomoon/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script>
+
+
+   $(document).ready(function(){
+
+   $("#navigation").on("click",function(){
+   $("#main-menu").slideToggle();
+   })
+
+   });
+ </script>
+ <script>
+   $(document).ready(function()
+   {
+     $("#new").on("click",function()
+     {
+
+  window.location.href = "addcontact.html";
+     })
+     $("#view").on("click",function()
+     {
+       window.location.href = "viewcontact.html";
+     })
+   })
+ </script>
+  </head>
+  <body>
+    <header>
+
+
+    <div class="menu">
+      <button id="navigation" class="nav"></button>
+      <img src="image/sos-logo-final.png" alt="logo"><h1>Safe24x7</h1></div>
+
+    <nav id="main-menu" class="profile">
+      <div class="pro"><img src="image/sos-logo-final.png" alt="logo"></div>
+    <ul >
+      <li class="home"> <a href="dashboard.html">Home</a></li>
+      <li class="contact"> <a href="contacts.html">Add contacts</a> </li>
+      <li class="settings"> <a href="settings.html">Settings</a> </li>
+      <li class="notification"> <a href="notifications.hmtl">Notifications</a> </li>
+      <li class="about"> <a href="aboutus.html">About Us</a> </li>
+      <li class="logout"> <a href="logout.html">Logout</a> </li>
+           </ul>
+         </nav>
+    </header>
+    <main>
+      <div class="main">
+      <nav>
+      <ul>
+        <li id="new"> Add Contacts</li>
+        <li id="view"> Contact List</li>
+
+      </ul>
+    </nav>
+    <form name="form1" method="post" id="form2" action="#">
+    <label for="name" class="hidden">Name</label>
+      <input type="text" placeholder="Name" value="name"   name="n" id="name">
+      <label for="phone" class="hidden">Phone No.</label>
+      <input type="text" placeholder="Phone No." value="phone"  name="ln" id="phone">
+    <label  for="email" class="hidden">Email Address</label>
+    <input type="email" placeholder="Email Address" value="email"   name="email" id="email">
+    <label for="data" class="hidden">Click to submit your data</label><br>
+
+    <button type="button" name="button" onclick="updateData()">Update</button>
+    <button type="button" name="button" >Cancel</button>
+
+
+    <!-- <input type="submit" value="Update Contact" name="submit" id="submit" onclick="updateData()"> -->
+    <!-- <input type="submit" value="Cancle" name="submit" id="submit"> -->
+
+      </form>
+      </div>
+    </main>
+
+
+    <footer>
+    <div class="footer">
+      <h2>Safe24x7</h2>
+    <hr>
+    <ul>
+        <li>Prevention</li>
+        <li>Protection</li>
+        <li>Safety</li>
+        </ul>
+    </div>
+     </footer>
+     <script>
+       // Initialize Firebase
+       var config = {
+         apiKey: "AIzaSyBlQZeSUe-aRZbUvY1gF9G6t2rhMW9BSzY",
+         authDomain: "safeapp-6cda0.firebaseapp.com",
+         databaseURL: "https://safeapp-6cda0.firebaseio.com",
+         projectId: "safeapp-6cda0",
+         storageBucket: "safeapp-6cda0.appspot.com",
+         messagingSenderId: "621321399323"
+       };
+       firebase.initializeApp(config);
+       const db= firebase.firestore();
+      db.settings({timestampsInSnapshots: true});
+     </script>
+
+      <!-- <script>
+       // Initialize Firebase
+       var config = {
+         apiKey: "AIzaSyDVDOv3bfmDax6pPnME4cF1-yjkBBcg5n0",
+         authDomain: "test1-c1a3f.firebaseapp.com",
+         databaseURL: "https://test1-c1a3f.firebaseio.com",
+         projectId: "test1-c1a3f",
+         storageBucket: "test1-c1a3f.appspot.com",
+         messagingSenderId: "734281412457"
+       };
+       firebase.initializeApp(config);
+       const db= firebase.firestore();
+      db.settings({timestampsInSnapshots: true});
+      </script> -->
+    <script src="js/updateContact.js">
+    </script>
+  </body>
+</html>

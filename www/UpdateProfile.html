@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign up</title>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+    <div class="menu"><img src="image/sos-logo-final.png" alt="logo"><h1>Safe24x7</h1></div>
+    </header>
+
+<main>
+
+  <div class="main">
+ <h1>Sign Up</h1>
+    <form name="form1" method="post" id="form1" action="#">
+    <label for="fname" class="hidden">First Name</label>
+      <input type="text" placeholder="First Name"  name="fn" id="fname">
+      <label for="lname" class="hidden">Last Name</label>
+      <input type="text" placeholder="Last Name"  name="ln" id="lname">
+    <label  for="email" class="hidden">E-mail Address</label>
+    <input type="email" placeholder="Email Address"  name="email" id="email">
+    <label for="user" class="hidden">Username</label>
+      <input type="text" placeholder="Username" name="us" id="user">
+      <label for="pass" class="hidden">Password</label>
+        <input type="password" placeholder="Password" name="pas" id="pass">
+    <label for="phone" class="hidden">Phone Number</label>
+      <input type="text" placeholder="Your Phone number" name="ph" id="phone"></br>
+       <label for="v" class="">Verify Mode:</label>
+    <input type="radio" value="bcid" id="ver1" name="bcid" value="bcid" >
+    <label for="ver1" class="">BC ID</label>
+
+    <input type="radio" id="ver2" name="passport" value="passport">
+    <label for="ver2" class="">Passport</label>
+    <input type="text" placeholder="Bcid/Passport"  name="iddata" id="iddata">
+    <label for="data" class="hidden">Click to submit your data</label>
+    <input type="submit" value="Sign Up" name="submit" id="data">
+   </form>
+
+  </div>
+</main>
+</div >
+      <p style="text-align:center">Member? <a href="index.html">Login </a></p>
+</div>
+<footer>
+<div class="footer">
+  <h2>Safe 24by7</h2>
+<hr>
+<ul>
+    <li>Prevention</li>
+    <li>Protection</li>
+    <li>Safety</li>
+</div>
+ </footer>
+
+ <script>
+   // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyBlQZeSUe-aRZbUvY1gF9G6t2rhMW9BSzY",
+     authDomain: "safeapp-6cda0.firebaseapp.com",
+     databaseURL: "https://safeapp-6cda0.firebaseio.com",
+     projectId: "safeapp-6cda0",
+     storageBucket: "safeapp-6cda0.appspot.com",
+     messagingSenderId: "621321399323"
+   };
+   firebase.initializeApp(config);
+   const db= firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+ </script>
+
+
+ <!-- <script>
+   // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyDVDOv3bfmDax6pPnME4cF1-yjkBBcg5n0",
+     authDomain: "test1-c1a3f.firebaseapp.com",
+     databaseURL: "https://test1-c1a3f.firebaseio.com",
+     projectId: "test1-c1a3f",
+     storageBucket: "test1-c1a3f.appspot.com",
+     messagingSenderId: "734281412457"
+   };
+   firebase.initializeApp(config);
+   const db= firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+ </script> -->
+ <script src="js/UpdateProfile.js">   </script>
+
+ </body>
+</html>

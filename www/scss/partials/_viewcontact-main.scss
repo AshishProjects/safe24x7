@@ -1,0 +1,42 @@
+main{
+  .main{
+    nav{
+      ul{
+        text-align: center;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+        li {
+          font-size: 1.2rem;
+          list-style-type: none;
+          color:$color_primary;
+          background-color:$color_tertiary;
+          padding:20px;
+          margin:10px;
+
+        }
+        #view
+        {
+          background-color: $color_secondary;
+        }
+      }
+    }
+    .contactlist
+    {
+      ul{
+        text-align: center;
+        font-size: 1.2rem;
+        padding:0;
+
+        li {
+          border:1px solid black;
+          border-radius: 0.75rem;
+          padding:20px;
+          margin:10px;
+          list-style-type: none;
+        }
+      }
+    }
+
+}
+}

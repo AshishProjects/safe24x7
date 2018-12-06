@@ -1,0 +1,59 @@
+main{
+  .main{
+    nav{
+      ul{
+        text-align: center;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+        li {
+          font-size: 1.2rem;
+          list-style-type: none;
+          color:$color_primary;
+          background-color:$color_tertiary;
+          padding:20px;
+          margin:10px;
+
+        }
+        #new
+        {
+          background-color: $color_secondary;
+        }
+      }
+    }
+    form
+    {
+
+
+      text-align: center;
+      font-size: 1.2rem;
+      input
+     {
+       padding:15px 0px;
+
+       width:75%;
+       margin:20px 0px;
+       // background-color:$color_secondary;
+       border:none;
+       border-bottom: 1px solid black;
+
+       &[type="submit"]
+       {
+           border: none;
+           padding: 20px 0;
+           font-size: 1.5rem;
+           color: #fff;
+           background: #0080ff;
+      }}
+      .hidden
+      {
+          position: absolute !important;
+          height: 1px; width: 1px;
+          overflow: hidden;
+          clip: rect(1px, 1px, 1px, 1px);
+          clip: rect(1px, 1px, 1px, 1px);
+      }
+    }
+  }
+
+}

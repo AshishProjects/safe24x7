@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+  <link rel="stylesheet" href="css/style1.css">
+     <link rel="stylesheet" href="icomoon/style.css">
+
+    <link rel="manifest" href="./manifest.json">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCj9CHnVckMuQfkX9UXQ8c5hHHxkoMhHrY&signed_in=true">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+
+<!-- <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-messaging.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
+
+        <script>
+
+
+          var myId=sessionStorage.getItem("myIdd");
+          // window.alert("id is -- "+myId);
+
+   $(document).ready(function(){
+
+   $("#navigation").on("click",function(){
+   $("#main-menu").slideToggle();
+   })
+
+   });
+   </script>
+
+   <style>
+         #map {
+           width: 100%;
+           height: 400px;
+           background-color: grey;
+         }
+       </style>
+
+<body >
+<header>
+
+
+<div class="menu">
+  <button id="navigation" class="nav"></button>
+  <img src="image/sos-logo-final.png" alt="logo"><h1>Safe24x7</h1></div>
+
+<nav id="main-menu" class="profile">
+  <div class="pro"><img src="image/sos-logo-final.png" alt="logo"></div>
+<ul >
+         <li class="home"> <a href="dashboard.html">Home</a></li>
+          <li class="home"> <a href="UpdateProfile.html">Update Profile</a></li>
+         <li class="contact"> <a href="addcontact.html">Add contacts</a> </li>
+         <li class="settings"> <a href="#">Settings</a> </li>
+         <!-- <li class="notification"> <a href="#">Notifications</a> </li> -->
+         <li class="about"> <a href="#">About Us</a> </li>
+         <li class="logout"> <a onclick="logoutUser()">Logout</a> </li>
+       </ul>
+     </nav>
+</header>
+<main>
+  <div class="main">
+  <nav>
+  <ul>
+    <a href="viewcontact.html"> <li> Contact List</li></a>
+    <li> Emergency Contacts</li>
+     <a href="map.html"><li>Current Location</li></a>
+  </ul>
+</nav>
+<form id="form">
+<input type="button" onclick="getLocation()" name="Alert"  id="alert"  class="button" value="SOS" >
+<!-- <input type="button" onclick="getPermission()"  name="Alert"  id="alert"  class="button" value="SOS" > -->
+<!-- <button type="button" id="alert" name="SOS" style="color:red" value="SOS" onclick="getLocation()">SOS</button> -->
+</form>
+</div>
+<div class="my-location">
+
+</div>
+<div id="token" ></div>
+  </main>
+<footer>
+<div class="footer">
+  <div class="iddd">
+  </div>
+
+
+  <h2>Safe24x7</h2>
+<hr>
+<ul>
+    <li>Prevention</li>
+    <li>Protection</li>
+    <li>Safety</li>
+    </ul>
+</div>
+
+ </footer>
+ <script>
+   // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyBlQZeSUe-aRZbUvY1gF9G6t2rhMW9BSzY",
+     authDomain: "safeapp-6cda0.firebaseapp.com",
+     databaseURL: "https://safeapp-6cda0.firebaseio.com",
+     projectId: "safeapp-6cda0",
+     storageBucket: "safeapp-6cda0.appspot.com",
+     messagingSenderId: "621321399323"
+   };
+   firebase.initializeApp(config);
+   const db= firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+ </script>
+
+ <!-- <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDVDOv3bfmDax6pPnME4cF1-yjkBBcg5n0",
+    authDomain: "test1-c1a3f.firebaseapp.com",
+    databaseURL: "https://test1-c1a3f.firebaseio.com",
+    projectId: "test1-c1a3f",
+    storageBucket: "test1-c1a3f.appspot.com",
+    messagingSenderId: "734281412457"
+  };
+  firebase.initializeApp(config);
+  const db= firebase.firestore();
+ db.settings({timestampsInSnapshots: true});
+ // Retrieve Firebase Messaging object.
+// const message = firebase.messaging();
+ // Add the public key generated from the console here.
+// message.usePublicVapidKey("BKxt-ghYxSv0ZfoaYA-3J9wFc9dLb-b29bPyE0N5bGVMjod8orLGeA3OtNahZVigqTOMY-dslgijT-8XIv-kpLQ");
+ </script> -->
+
+
+          <script>
+          var myId= sessionStorage.getItem("myIdd");
+        var myname = sessionStorage.getItem("myname");
+          // window.alert("id is "+ myId);
+          // document.getElementById("iddd").innerHTML= myId;
+        </script>
+
+
+ </body>
+
+ <!-- <script src="js/msgTest.js"> </script> -->
+ <!-- <script src="js/msgEditTest.js"> </script> -->
+ <!-- <script src="js/sendMainMsg.js"> </script> -->
+ <!-- <script type="text/javascript" src="cordova.js"></script> -->
+ <script src="js/updateLocations.js"> </script>
+ <script src="js/myCurrentlocation.js"> </script>
+
+</html>

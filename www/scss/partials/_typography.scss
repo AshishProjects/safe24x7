@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Bentharam|Bree+Serif|Roboto:400,400i,700,700i,900');
+header
+{
+  h1
+  {
+      font-family: 'Bree Serif', serif;
+  }
+}
+main
+{
+.main
+{
+  font-family: 'Roboto', sans-serif;
+  h1
+  {
+  font-family: 'Bree Serif', serif;
+  }
+}
+}
+footer
+{
+     font-family: 'Bree Serif', serif;
+}
+a
+{
+  text-decoration: none;
+  color:$color_tertiary;
+
+}
+input{
+  font-size: 1.2rem;
+
+}
+body{
+  margin:0;
+  
+  min-height: 100vh;
+}
